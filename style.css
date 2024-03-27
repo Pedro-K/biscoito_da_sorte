@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    color: #34355b;
+    height: 100vh;
+    background: linear-gradient(45deg, #190361, #bb00ff);
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+}
+
+p,button{
+    font-family: "DM Sans", sans-serif;
+}
+
+section{
+    max-width: 42.8rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 2rem 5rem rgb(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.7rem;
+    padding: 4.8rem 6.4rem 6.4rem;
+
+    & h1{
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    & p{
+        font-family: "DM Sans", sans-serif;
+        font-size: 1.5rem;
+    }
+
+    & .msg-sorte{
+        animation: aparecer ease-in 1s;
+    }
+
+    & button{
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+        & img{
+            width: 100%;
+        }
+    }
+
+    & #abrir-outro-biscoito{
+        background-color: #FF9500;
+        border: none;
+        border-radius: .4rem;
+        padding: 1.6rem;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    & .bs-fechado:hover{
+        animation: bouce ease-out 600ms infinite backwards;
+    }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes bouce{
+    0%{
+        transform: rotate(-2deg) scale(.9);
+        /* transform: translateX(-5px); */
+    }
+
+    50%{
+        transform: rotate(3deg) scale(1);
+        /* transform: translateX(5px); */
+    }
+
+    100%{
+        transform: rotate(-2deg) scale(.9);
+        /* transform: translateX(-5px); */
+    }
+}
+
+@keyframes aparecer {
+    0%{
+        transform: translateY(100px) scale(0) ;
+
+    }
+    100%{
+        transform: translateY(0px) scale(1) ;
+    }
+}
